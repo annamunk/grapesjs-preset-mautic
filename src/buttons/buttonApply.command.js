@@ -72,7 +72,7 @@ export default class ButtonApplyCommand {
       if (response.route) {
         // update URL in address bar
         MauticVars.manualStateChange = false;
-        History.pushState(null, 'Mautic', response.route);
+        window.history.pushState(null, 'Mautic', response.route);
 
         // update Title
         Mautic.generatePageTitle(response.route);
